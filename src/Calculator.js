@@ -29,8 +29,14 @@ function Calculator({ workouts, allowSound }) {
         sound.play();
       };
       playSound();
-    },[duration, allowSound]);
-
+    },
+    [duration, allowSound]
+  );
+  
+  useEffect(function() {
+    document.title = `Your ${number}-exercise workout`;
+  }, 
+  [number, duration, sets]);
   
   //const duration = (number * sets * speed) / 60 + (sets - 1) * durationBreak;
   const mins = Math.floor(duration);
