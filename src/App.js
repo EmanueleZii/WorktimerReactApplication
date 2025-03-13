@@ -43,12 +43,12 @@ function App() {
     },
   ]}, [partOfDay]);
 
-  // useEffect(function () {
-  //   const id = setInterval(function () {
-  //     setTime(formatTime(new Date()));
-  //   }, 1000);
-  //   return () => clearInterval(id);
-  // }, []);
+  useEffect(function () {
+    const id = setInterval(function () {
+      setTime(formatTime(new Date()));
+    }, 1000);
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <main>
